@@ -21,8 +21,7 @@ class AuthTest {
             page.click("button[type='submit']");
 
             // Ожидаем переход на страницу после входа
-            // Можно подождать URL, соответствующий ожидаемому шаблону
-            String expectedUrlPattern = "https://demo.fitbase.io/*"; // или конкретный путь
+            String expectedUrlPattern = "https://demo.fitbase.io/*";
             
             page.waitForURL(expectedUrlPattern, new Page.WaitForURLOptions().setTimeout(5000));
             System.out.println("Authorization is successful by URL change");
